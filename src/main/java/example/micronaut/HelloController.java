@@ -38,8 +38,13 @@ public class HelloController {
     public HttpResponse<User> createUser(
         @Body @JsonView(value = Views.CreateView.class) User user
     ) {
-        // user.setId("1");
-        // user.setSecretId("2");
+        if (user.getId() == null) {
+            user.setId("1");
+        }
+        if (user.getSecretId() == null) {
+            user.setSecretId("2");
+        }
+
         return HttpResponse.ok(user);
     }
 }
