@@ -1,4 +1,4 @@
-Repo for bug reported here: TODO
+Repo for bug reported here: https://github.com/micronaut-projects/micronaut-core/issues/10383
 
 Issue:
 When the `@Introspected` annotation is added to a model that is used as part of a `@JsonView`, the object is not view is not being honored and all fields are being returned on the object.
